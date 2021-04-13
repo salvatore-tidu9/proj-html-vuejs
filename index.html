@@ -13,7 +13,7 @@
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- MS_CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -26,67 +26,157 @@
 
 <body>
 
-    <section id="section_1">
+    <div id="root">
 
-        <div class="container_1">
+        <section id="section_1">
 
-            <header>
+            <div class="container container_1">
 
-                <div class="nav_menu_container">
+                <header>
 
-                    <ul class="nav_menu_left">
-    
-                        <li><a href="#">home</a> </li>
-                        <li><a href="#">the club</a> </li>
-                        <li><a href="#">events</a> </li>
-    
-                    </ul>
-    
-                    <div class="logo"><a href="#"><img src="img/avada-nightclub-logo-2x-300x99.png" alt=""></a></div>
+                    <div class="nav_menu_container">
 
-                    <i class="fas fa-bars hamburger_menu"></i>
+                        <ul class="nav_menu_left">
+
+                            <li v-for="(item, index) in navMenuLeft">
+
+                                <a :href="item.linkAddress" :class="index == activeLinkLeft ? 'active' : null " @click="changeActiveLinkLeft(index)">
+
+                                    {{item.linkName}}
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                        <div class="logo"><a href="#"><img :src="headerLogo" alt=""></a></div>
+
+                        <i class="fas fa-bars hamburger_menu"></i>
+
+                        <ul class="nav_menu_right">
+
+                            <li v-for="(item, index) in navMenuRight">
+
+                                <a :href="item.linkAddress" :class="index == activeLinkRight ? 'active' : null" @click="changeActiveLinkRight(index)">
+
+                                    {{item.linkName}}
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </header>
+
+            </div>
+
+            <div class="container container_2">
+
+                <div class="homepage_banner">
+
+                    <img src="img/avada-nightclub-homepage-image-1200x596.png" alt="">
+
+                </div>
+
+                <div class="homepage_title">
+
+                    <h1 class="title">making memories all night long</h1>
+
+                </div>
+
+                <div class="homepage_button">
+
+                    <button>become a vip</button>
+
+                </div>
+
+            </div>
+
+            <div class="container container_3">
+
+                <div class="homepage_bottom_logo">
+
+                    <img src="img/avada-nightclub-play-showreel-200x47.png" alt="">
+
+                </div>
+
+        </section>
+
+        <section id="section_2">
+
+            <div class="container container_4">
+
+                <div class="description_page">
+
+                    <h3>welcome to avada</h3>
     
-                    <ul class="nav_menu_right">
+                    <h1 class="title">have the night of your life</h1>
     
-                        <li><a href="#">jobs</a> </li>
-                        <li><a href="#">news</a> </li>
-                        <li><a href="#">contact us</a> </li>
-    
-                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, fuga omnis nostrum eaque, velit alias voluptate sunt perferendis ducimus nam facilis laboriosam exercitationem quod, maiores debitis modi dolore harum ipsa?</p>
     
                 </div>
 
-            </header>
+            </div>
 
-        </div>
+            <div class="container container_5">
 
-        <div class="container_2">
+                <div class="first_row_card">
 
-            <div class="homepage_banner">
+                    <div class="card_wrapper">
 
-                <img src="img/avada-nightclub-homepage-image-800x398.png" alt="">
+                        <img src="img/avada-nightclub-dancelounge-small.jpg" alt="">
+
+                        <h4 class="card_title">dance lounge</h4>
+
+                        <div class="blue_line"></div>
+
+                    </div>
+
+                    <div class="card_wrapper">
+
+                        <img src="img/avada-nightclub-rooftoplounge-small.jpg" alt="">
+
+                        <h4 class="card_title">rooftop bar</h4>
+
+                        <div class="purple_line"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="second_row_card">
+
+                    <div class="card_wrapper">
+    
+                        <img src="img/avada-nightclub-viplounge-small.jpg" alt="">
+    
+                        <h4 class="card_title">vip lounge</h4>
+    
+                        <div class="gold_line"></div>
+    
+                    </div>
+    
+                    <div class="card_wrapper">
+    
+                        <img src="img/avada-nightclub-events-small.jpg" alt="">
+    
+                        <h4 class="card_title">resident dj</h4>
+    
+                        <div class="red_line"></div>
+    
+                    </div>
+    
+                </div>
 
             </div>
 
-            <div class="homepage_banner_title_button">
+        </section>
 
-                <h1 class="title">making memories all night long</h1>
-
-                <button>become a vip</button>
-
-            </div>
-
-        </div>
-
-        <div class="container_3">
-
-            <div class="homepage_bottom_logo">
-
-                <img src="img/avada-nightclub-play-showreel-200x47.png" alt="">
-
-            </div>
-
-    </section>
+    </div>
 
 
 
