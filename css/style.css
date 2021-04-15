@@ -1,22 +1,12 @@
 /* DEBUG */
 
 /* section {
-    border: 1px solid black;
+    border: 1px solid rgb(12, 177, 39);
 }
 
 .container {
     border: 1px solid blue;
-}
-
-.homepage_button {
-    border: 1px solid yellow;
-}
-
-.homepage_bottom_logo {
-    border: 1px solid pink;
 } */
-
-
 
 
 
@@ -30,7 +20,7 @@
 }
 
 body {
-    min-width: 280px;
+    min-width: 823px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -47,7 +37,7 @@ body {
     padding: 20px 0;
 }
 
-.container_1, .container_3 {
+.container_1, .container_3, .container_7 {
     position: relative;
 }
 
@@ -62,7 +52,7 @@ body {
     align-items: center;
 }
 
-.nav_menu_left li, .nav_menu_right li {
+.nav_menu_left li, .nav_menu_right li, .footer_nav_menu li {
     list-style: none;
     display: inline-block;
 }
@@ -79,11 +69,16 @@ body {
     margin-left: 80px;
 }
 
-.nav_menu_left li a, .nav_menu_right li a {
+.nav_menu_left li a, .nav_menu_right li a, .footer_nav_menu li a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     color: white;
+}
+
+.footer_nav_menu li a {
+    text-transform: capitalize;
+    color: #f53c81;
 }
 
 .nav_menu_left li a.active, .nav_menu_right li a.active {
@@ -91,14 +86,55 @@ body {
     border-bottom: 2px solid #f53c81;
 }
 
+.nav_menu_left li a:hover, .nav_menu_right li a:hover, .sidemenu li a:hover {
+    color: #f53c81;
+}
+
+.footer_nav_menu li a:hover {
+    color: #4da4dd;
+}
+
 .logo img {
     width: 100%;
+    z-index: 1;
 }
 
 .hamburger_menu {
     display: none;
     font-size: 30px;
     color: #f53c81;
+}
+
+.sidemenu {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 200px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #f53c81;
+    background-color: #161a609f;
+}
+
+.sidemenu ul li  {
+    list-style: none;
+    margin-bottom: 35px;
+    height: 40px;
+    padding: 5px;
+}
+
+.sidemenu ul li:hover {
+    background-color: #3e3db8;
+    border-radius: 5px;
+}
+
+.sidemenu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
 
 .homepage_banner {
@@ -143,7 +179,13 @@ body {
     font-weight: bold;
     color: white;
     background-color: #f53c81;
+    border-color: #f53c81;
+    border-radius: 3px;
     cursor: pointer;
+}
+
+.homepage_button button:hover {
+    box-shadow: 0px 5px 50px 2px #f53c81;
 }
 
 .homepage_bottom_logo {
@@ -180,7 +222,7 @@ body {
 .description_page p {
     text-align: center;
     width: 50%;
-    margin-top: 20px;
+    margin: 20px 0;
     color: white;
 }
 
@@ -202,8 +244,6 @@ body {
     position: absolute;
     bottom: 10%;
     left: 5%;
-    /* transform: translateX(-50%); */
-    /* font-size: 15px; */
     color: white;
 }
 
@@ -230,6 +270,311 @@ body {
     border-top: 2px solid #78030d;
 }
 
+#section_3 {
+    background-color: #0d0c11;
+}
+
+.row_card {
+    display: flex;
+    justify-content: center;
+}
+
+.card_1, .card_2 {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2);
+    height: 500px;
+    padding: 80px 30px;
+}
+
+.card_1 {
+    background-image: url(../img/avada-nightclub-resident-profile.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top: 5px solid #f53c81;
+}
+
+.card_2 {
+    background-image: url(../img/avada-nightclub-lisahouse-inset-new.jpg);
+    background-size: cover;
+    background-position: top;
+    border-top: 5px solid #4da4dd;
+}
+}
+
+.card_1 h4, .card_2 h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card_1 h4 {
+    color:#f10c60;
+}
+
+.card_2 h4 {
+    color: #4da4dd;
+}
+
+.card_1 h1, .card_2 h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.card_1 button, .card_2 button {
+    width: 130px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.card_1 button {
+    border-color: #4da4dd;
+    background-color: #4da4dd;
+}
+
+.card_2 button {
+    border-color: #f53c81;
+    background-color: #f53c81;
+}
+
+.card_1 button:hover {
+    box-shadow: 0px 5px 50px 2px #4da4dd;
+}
+
+.card_2 button:hover {
+    box-shadow: 0px 5px 50px 2px #f53c81;
+}
+
+#section_4 {
+    padding: 100px 0;
+    background-image: url(../img/avada-nightclub-homepage-events-background-new.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.description_page .second {
+    color: #f53c81;
+}
+
+.card_grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 320px;
+    padding: 20px;
+    margin: 10px 20px;
+    height: 300px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    border-radius: 3px;
+}
+
+.card h4 {
+    margin-top: 20px;
+    
+    font-weight: bold;
+    color: #f53c81;
+}
+
+.card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.container_7 {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container_7 button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #f53c81;
+    border-color: #f53c81;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.container_7 button:hover, .bottom_banner_right button:hover {
+    box-shadow: 0px 5px 50px 2px #f53c81;
+}
+
+#section_5 {
+    background-image: url(../img/avada-nightclub-vip-hero-new.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding: 100px 0;
+}
+
+.container_8 {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom_banner_left, .bottom_banner_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom_banner_left {
+    width: 600px;
+    padding-left: 60px;
+}
+
+.bottom_banner_right {
+    width: 400px;
+}
+
+
+.bottom_banner_left h3 {
+    text-transform: uppercase;
+    color: #67afdf;
+}
+
+.bottom_banner_left h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.bottom_banner_right button {
+    text-transform: uppercase;
+    width: 200px;
+    margin-left: 50px;
+    padding: 15px 35px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #f53c81;
+    border-color: #f53c81;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 100px 0;
+    /* background-color: #0d0c11; */
+    background-image: url(../img/avada-nightclub-footer-background-final-2.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.container_9 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    border-radius: 3px;
+}
+
+.footer_logo, .email, .social_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+}
+
+.footer_logo img {
+    width: 100%;
+}
+
+.email ul li, .social_links ul li {
+    list-style: none;
+}
+
+.email ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fafafa;
+}
+
+.email ul li a:hover {
+    color: #f53c81;
+}
+
+.social_links ul li {
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.social_links ul li a i {
+    font-size: 30px;
+    color: #4da4dd;
+}
+
+.social_links ul li a i:hover {
+    color: #f53c81;
+}
+
+.footer_info  {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fafafa;
+}
+
+.footer_info span {
+    font-size: 12px;
+}
+
+.back_top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.back_top i {
+    font-size: 40px;
+    padding: 10px 13px;
+    color: #fafafa;
+    background: linear-gradient(to bottom, #2544f1c0 10%, #f53c8098 100%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.footer_nav_menu_container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.footer_nav_menu li {
+    margin-right: 20px;
+}
 
 
 
@@ -267,7 +612,6 @@ body {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        margin-left: 30px;
     }
 
     .hamburger_menu {
@@ -276,8 +620,6 @@ body {
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        font-size: 18px;
-        margin-right: 30px;
     }
 
     .homepage_banner img {
@@ -286,12 +628,12 @@ body {
 
     .homepage_title {
         width: 100%;
-        height: 70px;
+        height: 100px;
     }
 
     .title {
         line-height: 50px;
-        font-size: 11px;
+        font-size: 20px;
     }
 
     .homepage_title button {
@@ -306,12 +648,24 @@ body {
         flex-wrap: wrap;
     }
 
+    .description_page {
+        margin-top: 20px;
+    }
+
     .description_page h3 {
-        font-size: 11px;
+        font-size: 15px;
     }
 
     .description_page p {
-        font-size: 12px;
+        font-size: 15px;
+    }
+
+    .blue_line, .purple_line, .gold_line, .red_line {
+        width: 30%;
+    }
+
+    .bottom_banner_left h1 {
+        font-size: 25px;
     }
 
 }
@@ -328,7 +682,6 @@ body {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        margin-left: 30px;
     }
 
     .hamburger_menu {
@@ -337,7 +690,6 @@ body {
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        margin-right: 30px;
     }
 
     .homepage_banner img {
@@ -357,7 +709,13 @@ body {
         font-size: 30px;
     }
 
+    .description_page {
+        margin-top: 30px;
+    }
 
+    .bottom_banner_left h1 {
+        font-size: 25px;
+    }
 
 }
 
@@ -383,4 +741,14 @@ body {
     .homepage_banner img {
         width: 100%;
     }
+
 }
+
+@media screen and (min-width: 1212px) {
+    
+    .sidemenu {
+        display: none;
+    }
+}
+
+

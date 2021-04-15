@@ -28,53 +28,91 @@
 
     <div id="root">
 
+        <!-- SECTION_1 -->
+
         <section id="section_1">
 
-            <div class="container container_1">
+            <header>
 
-                <header>
+                <div class="container container_1">
 
                     <div class="nav_menu_container">
-
+    
                         <ul class="nav_menu_left">
-
+    
                             <li v-for="(item, index) in navMenuLeft">
-
+    
                                 <a :href="item.linkAddress" :class="index == activeLinkLeft ? 'active' : null " @click="changeActiveLinkLeft(index)">
-
+    
                                     {{item.linkName}}
-
+    
                                 </a>
-
+    
                             </li>
-
+    
                         </ul>
-
+    
                         <div class="logo"><a href="#"><img :src="headerLogo" alt=""></a></div>
+    
+                            <i class="fas fa-bars hamburger_menu" @click="showMenu"></i>
 
-                        <i class="fas fa-bars hamburger_menu"></i>
-
-                        <ul class="nav_menu_right">
-
-                            <li v-for="(item, index) in navMenuRight">
-
-                                <a :href="item.linkAddress" :class="index == activeLinkRight ? 'active' : null" @click="changeActiveLinkRight(index)">
-
-                                    {{item.linkName}}
-
-                                </a>
-
-                            </li>
-
-                        </ul>
-
+                            <ul class="nav_menu_right">
+    
+                                <li v-for="(item, index) in navMenuRight">
+    
+                                    <a :href="item.linkAddress" :class="index == activeLinkRight ? 'active' : null" @click="changeActiveLinkRight(index)">
+    
+                                        {{item.linkName}}
+    
+                                    </a>
+    
+                                </li>
+    
+                            </ul>
+    
                     </div>
 
-                </header>
+                    <div class="sidemenu" v-show="navVisible">
 
-            </div>
+                        <nav>
 
-            <div class="container container_2">
+                            <div class="sidemenu_wrapper">
+
+                                <ul class="sidemenu_list">
+    
+                                    <li v-for="(item, index) in navMenuLeft">
+        
+                                        <a :href="item.linkAddress" :class="index == activeLinkLeft ? 'active' : null " @click="changeActiveLinkLeft(index)">
+            
+                                            {{item.linkName}}
+            
+                                        </a>
+            
+                                    </li>
+    
+                                    <li v-for="(item, index) in navMenuRight">
+        
+                                        <a :href="item.linkAddress" :class="index == activeLinkRight ? 'active' : null" @click="changeActiveLinkRight(index)">
+        
+                                            {{item.linkName}}
+        
+                                        </a>
+        
+                                    </li>
+                                
+                                </ul>
+    
+                            </div>
+
+                        </nav>
+
+                    </div>
+    
+                </div>
+
+            </header>
+
+            <div class="container container_2" @click="hideMenu">
 
                 <div class="homepage_banner">
 
@@ -106,13 +144,17 @@
 
         </section>
 
+        <!-- /SECTION_1 -->
+
+        <!-- SECTION_2 -->
+
         <section id="section_2">
 
             <div class="container container_4">
 
                 <div class="description_page">
 
-                    <h3>welcome to avada</h3>
+                    <h3 class="first">welcome to avada</h3>
     
                     <h1 class="title">have the night of your life</h1>
     
@@ -176,19 +218,225 @@
 
         </section>
 
+        <!-- /SECTION_2 -->
+
+        <!-- SECTION_3 -->
+
+        <section id="section_3">
+
+            <div class="container container_6">
+
+                <div class="row_card">
+
+                    <div class="card_1">
+
+                        <h4>resident dj</h4>
+
+                        <h1>dj avada</h1>
+
+                        <button>view profile</button>
+
+                    </div>
+
+                    <div class="card_2">
+
+                        <h4>special guest dj</h4>
+
+                        <h1>dj blondie</h1>
+
+                        <button>view profile</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- /SECTION_3 -->
+
+        <!-- SECTION_4 -->
+
+        <section id="section_4">
+
+            <div class="container container_7">
+
+                <div class="description_page">
+
+                    <h3 class="second">special events</h3>
+    
+                    <h1 class="title">for your diary</h1>
+    
+                </div>
+
+                <div class="card_grid">
+
+                    <div class="card">
+
+                        <img src="img/avada-nightclub-events-6-200x113.jpg" alt="">
+
+                        <h4>DJ Fusion</h4>
+
+                        <span>August 19, 2021 @8:00 am</span>
+
+                    </div>
+
+                    <div class="card">
+
+                        <img src="img/avada-nightclub-events-5-200x113.jpg" alt="">
+
+                        <h4>House Nation</h4>
+
+                        <span>August 19, 2021 @8:00 am</span>
+
+                    </div>
+
+                    <div class="card">
+
+                        <img src="img/avada-nightclub-events-4-200x113.jpg" alt="">
+
+                        <h4>Jazz Night</h4>
+
+                        <span>August 19, 2021 @8:00 am</span>
+
+                    </div>
+
+                    <div class="card">
+
+                        <img src="img/avada-nightclub-events-3-200x113.jpg" alt="">
+
+                        <h4>VIP Taster Sessions</h4>
+
+                        <span>September 1, 2021 @8:00 am</span>
+
+                    </div>
+
+                    <div class="card">
+
+                        <img src="img/avada-nightclub-events-2-200x113.jpg" alt="">
+
+                        <h4>Funky House Rave</h4>
+
+                        <span>September 16, 2021 @8:00 am</span>
+
+                    </div>
+
+                    <div class="card">
+
+                        <img src="img/avada-nightclub-events-1-200x113.jpg" alt="">
+
+                        <h4>Urban Vibes</h4>
+
+                        <span>September 20, 2021 @8:00 am</span>
+
+                    </div>
+
+                </div>
+
+                <button>rsvp now</button>
+
+            </div>
+
+        </section>
+
+        <!-- /SECTION_4 -->
+
+        <!-- SECTION_5 -->
+
+        <section id="section_5">
+
+            <div class="container container_8">
+
+                <div class="bottom_banner_left">
+
+                    <h3>become a vip tonight</h3>
+
+                    <h1>exclusive vip lounge</h1>
+
+                </div>
+
+                <div class="bottom_banner_right">
+
+                    <button>join the club</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- /SECTION_5 -->
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="container container_9">
+
+                <div class="footer_nav_menu_container">
+    
+                    <ul class="footer_nav_menu">
+
+                        <li v-for="(item, index) in footerNavMenu">
+
+                            <a :href="item.linkAddress">
+
+                                {{item.linkName}}
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer_logo"><a href="#"><img :src="footerLogo" alt=""></a></div>
+
+                <div class="email">
+
+                    <ul>
+
+                        <li v-for="(email,index) in emailLinks"><a :href="email.link">{{email.emailName}}</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="social_links">
+
+                    <ul>
+
+                        <li v-for="(link, index) in socialLinks">
+
+                            <a href="#"><i :class="socialLinks[index]"></i></a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer_info">
+
+                    <span>{{copyRight}}</span>
+
+                </div>
+
+                <div class="back_top" @click="scrollToTop">
+
+                    <i class="fas fa-chevron-up"></i>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- /FOOTER -->
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
